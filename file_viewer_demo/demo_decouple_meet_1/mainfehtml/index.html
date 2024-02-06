@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="unsafe-url" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taipy App</title>
+    <!-- Include bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="row">
+            <div id="main" class="col-12">
+                <h3>File Viewer Demo</h1>
+                    <div>Current File Location: <span id="demo_decouple_meet_1.mainpage.file_name"></span></div>
+                    <div>Default Base File Path: <span id="demo_decouple_meet_1.mainpage.base_path"></span></div>
+                    <div class="my-4">
+                        <label for="fileselect" class="form-label"><b>Select</b> file (file should be within the default base
+                            file path):</label>
+                        <input class="form-control" id="fileselect" type="file" accept=".json,.xprjson"
+                            multiple="false" />
+                    </div>
+                    <div class="my-4">
+                        <label for="fileupload" class="form-label"><b>Upload</b> file (uploaded file will be stored in a
+                            temporary location):</label>
+                        <input class="form-control" id="fileupload" type="file" accept=".json,.xprjson"
+                            multiple="false" />
+                    </div>
+                    <div class="my-2">
+                        <textarea class="form-control" cols="100" rows="20"
+                            id="demo_decouple_meet_1.mainpage.json_data-textarea"
+                            placeholder="File Content..."></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <button id="loadfile" class="btn btn-primary">Load File</button>
+                        <button id="savefile" class="btn btn-secondary">Save File</button>
+                        <button id="savenewfile" class="btn btn-danger">Save as New File</button>
+                        <a href="#" id="filedownload" hidden="hidden"></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="./taipy-gui-base.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
