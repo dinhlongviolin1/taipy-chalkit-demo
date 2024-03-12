@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="unsafe-url" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taipy App</title>
+    <!-- Include bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="row">
+            <div id="main" class="col-12">
+                <h3>File Loader Demo</h1>
+                    <div>Current File Location (from frontend metadata API): <span id="file_path"></span></div>
+                    <div class="my-2">
+                        <textarea class="form-control" cols="100" rows="20"
+                            id="demo_fd_file_loader.mainpage.json_data-textarea"
+                            placeholder="File Content..."></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <button id="loadfile" class="btn btn-primary">Load File</button>
+                        <button id="savefile" class="btn btn-secondary">Save File</button>
+                        <a href="#" id="filedownload" hidden="hidden"></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="./taipy-gui-base.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
