@@ -57,10 +57,10 @@ class PureHTMLResourceHandler(ResourceHandler):
         return ("File not found", 404)
 
 
-class ExtenedPage(Page):
+class ExtendedPage(Page):
     def __init__(self, file_path: str):
         root_path = f"{str(pathlib.Path(inspect.stack()[1].filename).parent.resolve())}{sep}"
         super().__init__(resource_handler=PureHTMLResourceHandler(), metadata={"file_path": root_path + file_path})
 
 
-page = ExtenedPage("config.xprjson")
+page = ExtendedPage("config.xprjson")
